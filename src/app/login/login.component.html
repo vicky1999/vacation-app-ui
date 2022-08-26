@@ -1,0 +1,44 @@
+<div class="login-container">
+    <div class="login-card">
+        <!-- <h1 class="title-center title">Login</h1> -->
+        <div class="person-icon-container">
+            <mat-icon class="person-icon">person</mat-icon>
+        </div>
+        <div></div>
+        <form [formGroup]="formGroup" (ngSubmit)="loginUser()">
+            <div *ngIf="!isAuthenticated">
+                <p class="err-msg">Login Failed</p>
+            </div>
+            <div class="input-field">
+                <mat-form-field class="input-container" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <div matPrefix class="input-prefix">
+                        <mat-icon>person_outline</mat-icon>
+                    </div>
+                    <input matInput placeholder="" value="" formControlName="username">
+                    <mat-error *ngIf="formGroup.get('username')?.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="formGroup.get('username')?.hasError('email')">
+                        Please enter a valid <strong>Email</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input-field">
+                <mat-form-field class="input-container" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <div matPrefix class="input-prefix">
+                        <mat-icon>password</mat-icon>
+                    </div>
+                    <input type="password" matInput placeholder="" value="" formControlName="password">
+                    <mat-error *ngIf="formGroup.get('password')?.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="buttons-container">
+                <button type="submit" mat-raised-button color="primary">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.page-title {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.button-container>button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+}

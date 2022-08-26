@@ -1,0 +1,70 @@
+.request-title {
+    text-align: center;
+    color: #484848;
+}
+
+.request-container {
+    margin-top: 50px;
+    min-width: 400px;
+    // margin: auto;
+    height: 50%;
+    display: grid;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-card {
+    display: inline;
+    background: #f5f5f5;
+    align-items: center;
+    position: relative;
+    border-radius: 25px;
+    margin: 20px auto;
+
+    width: 70%;
+    // height: 500px;
+    padding: 20px;
+    max-width: 1000px;
+    min-width: 300px;
+    box-shadow: 3px 3px 10px gray;
+}
+
+.card-topic {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inputs-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.form-input {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.request-bottom-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.button-element {
+    width: 150px;
+    height: auto;
+    font-size: 16px;
+}
+
+.reason-input {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    .reason-input {
+        margin-top: 10px;
+    }    
+}

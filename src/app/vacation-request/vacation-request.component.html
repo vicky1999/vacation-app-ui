@@ -1,0 +1,52 @@
+<form class="request-form" [formGroup]="formGroup" (ngSubmit)="addVacationRequest()">
+    <div class="request-title">
+        <h1>VACATION REQUEST</h1>
+    </div>
+    <div class="request-container">
+        <div class="request-card">
+            <!-- <div class="card-topic">
+                <p>Vacation Request</p>
+            </div> -->
+            <div class="inputs-group">
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Choose Start Date</mat-label>
+                    <input matInput [matDatepicker]="startDatepicker" formControlName="startDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startDatepicker></mat-datepicker>
+                    <mat-error *ngIf="formGroup.get('startDate')?.hasError('required')">
+                        Start Date is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Choose End Date</mat-label>
+                    <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #endDatePicker></mat-datepicker>
+                    <mat-error *ngIf="formGroup.get('endDate')?.hasError('required')">
+                        End Date is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Reason</mat-label>
+                    <textarea matInput formControlName="reason" rows="5"></textarea>
+                    <mat-error *ngIf="formGroup.get('reason')?.hasError('required')">
+                        Reason is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <div class="inputs-group">
+                    <app-file-uploader class="form-input" label="Logo" [multiple]="false" (fileUpload)="fileUploaded($event)">
+                    </app-file-uploader>
+                </div>
+
+            </div>
+        </div>
+        <div class="request-card">
+            <div class="request-bottom-buttons">
+                <button mat-raised-button color="primary" class="button-element">Save</button>
+                <button mat-raised-button color="warn" class="button-element">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>

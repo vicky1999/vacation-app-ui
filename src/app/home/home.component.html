@@ -1,0 +1,2 @@
+<app-admin-home *ngIf="user?.position === 'admin'"></app-admin-home>
+<app-employee-home *ngIf="user?.position !== 'admin'"></app-employee-home>

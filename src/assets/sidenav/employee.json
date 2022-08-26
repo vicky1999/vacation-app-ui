@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Vacation",
+    "children": [
+      {
+        "text": "Add Request",
+        "icon": "add",
+        "routerLink": "/vacation-request"
+      },
+      {
+        "text": "Requests List",
+        "icon": "grid_view",
+        "routerLink": "/requests"
+      }
+    ]
+  }
+]

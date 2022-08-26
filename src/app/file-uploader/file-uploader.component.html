@@ -1,0 +1,17 @@
+<div class="file-upload">
+    <div class="form-input">
+        <mat-label>{{label}}</mat-label>
+        <div class="file-uploader">
+            <div class="file-upload-section" (click)="logoInput.click()">
+                <div class="fileinput-label">
+                    Click to upload {{ multiple ? 'Files' : 'File'}}
+                </div>
+            </div>
+            <input hidden type="file" #logoInput (change)="fileUploaded($event)" [multiple]="multiple">
+        </div>
+        <div class="uploaded-files" *ngFor="let file of files">
+            <div>{{file.name}}</div>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>

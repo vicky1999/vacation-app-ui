@@ -1,0 +1,10 @@
+<div class="mat-h1 page-title">Vacation Requests</div>
+<ag-grid-angular style="height: 500px; margin: auto;" class="ag-theme-alpine" [rowData]="rowData"
+    [columnDefs]="columnDefs" [defaultColDef]="defaultColDefs" (cellValueChanged)="gridUpdated($event)">
+</ag-grid-angular>
+
+<div *ngIf="isAdmin && displayDetails" class="button-container">
+    <button mat-raised-button color="primary" [disabled]="!isUpdated"
+        (click)="updateVacationRequests()"
+    >Save</button>
+</div>

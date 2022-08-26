@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Employees",
+    "children": [
+      {
+        "text": "Add Employee",
+        "icon": "person_add_alt",
+        "routerLink": "/add-employee"
+      },
+      {
+        "text": "Employees List",
+        "icon": "grid_view",
+        "routerLink": "/employees"
+      }
+    ]
+  },
+  {
+    "title": "Vacations",
+    "children": [
+      {
+        "text": "View Requests",
+        "icon": "grid_view",
+        "routerLink": "/requests"
+      }
+    ]
+  }
+]

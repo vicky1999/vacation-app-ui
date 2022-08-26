@@ -1,0 +1,28 @@
+.file-upload {
+    width: 100%;
+}
+
+.file-upload-section {
+    display: flex;
+    height: 100%;
+    margin: auto;
+}
+
+.fileinput-label {
+    margin: auto;
+}
+
+.file-uploader {
+    background-image: linear-gradient(to bottom right, #d3d3d3, #b0b0b0);
+    border: 1px solid #b0b0b0;
+    color: #272727;
+    font-weight: bold;
+    cursor: pointer;
+    // background-color: #d3d3d3;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.uploaded-files {
+    border: 1px solid #b0b0b0;
+}

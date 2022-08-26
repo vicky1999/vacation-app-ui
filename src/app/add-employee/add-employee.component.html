@@ -1,0 +1,74 @@
+<form class="request-form" [formGroup]="formGroup" (ngSubmit)="addEmployee()">
+    <div class="request-title">
+        <h1>ADD EMPLOYEE</h1>
+    </div>
+    <div class="request-container">
+        <div class="request-card">
+            <div class="inputs-group">
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" rows="5" />
+                    <mat-error *ngIf="formGroup.get('name')?.hasError('required')">
+                        Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" rows="5" />
+                    <mat-error *ngIf="formGroup.get('email')?.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" rows="5" />
+                    <mat-error *ngIf="formGroup.get('password')?.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput type="password" formControlName="confirmPassword">
+                    <mat-error *ngIf="formGroup.get('confirmPassword')?.hasError('required')">
+                        Password Confirmation is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="formGroup.get('confirmPassword')?.hasError('mismatch')">
+                        Password doesn't match
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" rows="5" />
+                    <mat-error *ngIf="formGroup.get('description')?.hasError('required')">
+                        Description is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Position</mat-label>
+                    <input matInput formControlName="position" rows="5" />
+                    <mat-error *ngIf="formGroup.get('position')?.hasError('required')">
+                        Position is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Choose Hiring Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="hiring_date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="formGroup.get('hiring_date')?.hasError('required')">
+                        Hiring Date is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <div style="min-width: 300px;"></div>
+            </div>
+        </div>
+        <div class="request-card">
+            <div class="request-bottom-buttons">
+                <button mat-raised-button color="primary" class="button-element">Save</button>
+                <button mat-raised-button color="warn" class="button-element">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
